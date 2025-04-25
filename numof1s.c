@@ -1,9 +1,20 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-int main(int argc, char *argv[]) // 100
+int main(void)
 {
-    int l=strlen(argv[1]);
+    int t;
+    printf("enter num of test cases\n");
+    scanf("%d",&t);
+    printf("enter length of case, then string\n");
+    int len[t];
+    for(int i=0;i<t;i++)
+        {
+            printf("case %d\n",i+1);
+            scanf("%d", &len[i]);
+            
+        }
+    
     int d=0;
     for(int i=0;i<l;i++)
     {
