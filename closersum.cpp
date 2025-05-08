@@ -44,11 +44,11 @@ vector <int> closer(vector <int>& v, int target){
         ans.push_back(v.at((ind+2)%v.size()));
     }
     else if(b==true){
-        ans.push_back(v.at((ind-1)%v.size()));
-        ans.push_back(v.at((ind-2)%v.size()));
+        ans.push_back(v.at((ind-1+v.size())%v.size()));
+        ans.push_back(v.at((ind-2+v.size())%v.size()));
     }
     else{
-        ans.push_back(v.at((ind-1)%v.size()));
+        ans.push_back(v.at((ind-1+v.size())%v.size()));
         ans.push_back(v.at((ind+1)%v.size()));
     }
 
@@ -56,8 +56,8 @@ vector <int> closer(vector <int>& v, int target){
     return ans;
 }
 int main(){
-    vector <int> v ={2, 4, -1, 24, 11, 9};
-    int target =6;
+    vector <int> v ={-56, -1, 0, 56};
+    int target =0;
 
     vector <int> ans = closer(v, target);
 
